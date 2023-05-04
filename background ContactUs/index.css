@@ -35,6 +35,46 @@ body{
     z-index: 100;
 
 }
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+   @media screen and (max-width: 768px) {
+    .nav__menu{
+      position: fixed;
+      top: var(--header-height);
+      left: -100%;
+      width: 70%;
+      height: 100vh;
+      padding: 2rem;
+      background-color: var(--white-color);
+      transition: .4s;
+    }
+   }
+   .nav__item{
+    margin-bottom: var(--mb-4);
+    }
+    .nav__logo{
+      font-weight: var(--font-semi-bold);
+      font-size: 30px;
+    }
+    .nav__toggle,
+    .nav__shop{
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+    @media screen and (min-width:768px) {
+      .hamburger{
+        display: none;
+      }
+    }
+    @media screen and (max-width:768px) {
+      .navbar{
+        display: none;
+      }
+    }
 .navbar a{
     position: relative;
     font-size: 16px;
